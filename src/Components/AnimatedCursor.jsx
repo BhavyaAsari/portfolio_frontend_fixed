@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AnimatedCursor = ({
   size = 25,
   color = "#FF6FD9",
-  trailColor = "#FFFFFF",
+  // trailColor = "#FFFFFF",
 }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [trail, setTrail] = useState([]);
@@ -34,7 +34,7 @@ const AnimatedCursor = ({
 
   return (
     <>
-      {/* TRAIL PARTICLES */}
+      {/* TRAIL PARTICLES
       {trail.map((p) => (
         <motion.div
           key={p.id}
@@ -62,7 +62,7 @@ const AnimatedCursor = ({
                             `,
           }}
         />
-      ))}
+      ))} */}
 
       {/* MAIN CURSOR */}
       <motion.div
