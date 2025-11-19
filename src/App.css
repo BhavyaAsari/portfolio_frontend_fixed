@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.rtl-typing {
+
+  direction:rtl;
+  unicode-bidi: plaintext;
+}
+
+html, body {
+  overscroll-behavior: none;
+  background: #000; /* fallback when bouncing */
+    overflow-x: hidden;
+}
