@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Projects from "./Projects";
 import Footer from "./Footer";
-import Skills from "./skills";
+import Skills from "./Skills"
 import { Contact } from "./Contact";
 import Purple from "../assets/purple.png"
 import Education from "./Education";
