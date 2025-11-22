@@ -32,8 +32,8 @@ const Hero = ({ onShowContact }) => {
 
         {/* Role description */}
         <p className="text-2xl sm:text-3xl md:text-4xl leading-relaxed">
-          <em className="font-bold flex justify-center text-yellow-500 lg:justify-start">
-            Web <span className="ml-2 text-purple-500">Developer</span>
+          <em className="font-bold flex justify-center text-amber-600 lg:justify-start">
+            Web <span className="ml-2 text-purple-800">Developer</span>
           </em>
         </p>
       </div>
@@ -51,10 +51,10 @@ const Hero = ({ onShowContact }) => {
       <div className="lg:w-1/3 text-center lg:text-left mt-10 lg:mt-0 px-2">
         
         {/* About heading */}
-        <p className="text-yellow-500 text-3xl sm:text-4xl mb-3">About Me</p>
+        <p className="text-amber-500 text-3xl sm:text-4xl mb-3">About Me</p>
 
         {/* About description text */}
-        <p className="text-white font-bold text-base sm:text-lg md:text-xl mb-4">
+        <p className="text-white font-bold text-base sm:text-xl md:text-2xl mb-4">
           <em>
             "I’m a disciplined learner who enjoys turning challenges into growth.
             With a calm mindset, a strong learning attitude, and a passion for
