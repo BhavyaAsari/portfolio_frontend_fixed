@@ -1,18 +1,23 @@
+// Import required icons and assets
 import { BsInstagram, BsLaptop, BsGithub } from "react-icons/bs";
 import Mee from "../assets/mee.jpg";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = ({ onShowContact }) => {
   return (
-    <section className="flex flex-col lg:flex-row justify-around items-center px-10 py-16 text-white">
+    // Main hero section with responsive layout for mobile and desktop
+    <section className="flex flex-col lg:flex-row justify-around items-center px-4 sm:px-8 py-12 text-white">
       
-      {/* Left Text Section */}
+      {/* Left Section: Intro text and name animation */}
       <div className="lg:w-1/3 text-center lg:text-left mb-10 lg:mb-0">
-        <div className="text-6xl mb-3 text-black">
+        
+        {/* Intro heading */}
+        <div className="text-4xl sm:text-5xl md:text-6xl mb-2 text-black">
           <span>I'm</span>
         </div>
 
-        <h1 className="text-7xl font-bold mt-2 flex justify-center lg:justify-start text-white">
+        {/* Animated name text */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mt-2 flex justify-center lg:justify-start text-white leading-tight">
           <TypeAnimation
             sequence={["Bhavya Asari", 1500, "", 500]}
             wrapper="span"
@@ -22,62 +27,73 @@ const Hero = ({ onShowContact }) => {
           />
         </h1>
 
-        <hr className="border-purple-400 w-24 mx-auto lg:mx-0 my-6" />
+        {/* Divider line */}
+        <hr className="border-purple-400 w-20 sm:w-24 mx-auto lg:mx-0 my-4" />
 
-        <p className="text-4xl leading-relaxed">
+        {/* Role description */}
+        <p className="text-2xl sm:text-3xl md:text-4xl leading-relaxed">
           <em className="font-bold flex justify-center lg:justify-start">
             Web <span className="ml-2 text-purple-500">Developer</span>
           </em>
         </p>
       </div>
 
-      {/* Center Image */}
+      {/* Center Image Section */}
       <div className="flex justify-center lg:w-1/3">
         <img
           src={Mee}
           alt="Bhavya Asari"
-          className="rounded-full border-8 border-white w-64 h-64 object-cover shadow-lg hover:scale-105 transition-transform duration-300"
+          className="rounded-full border-4 sm:border-8 border-white w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 object-cover shadow-lg hover:scale-105 transition-transform duration-300"
         />
       </div>
 
-      {/* Right Section */}
-      <div className="lg:w-1/3 text-center lg:text-left mt-10 lg:mt-0">
-        <p className="text-black text-5xl mb-3">About Me</p>
-        <p className="text-white font-bold text-xl mb-4">
+      {/* Right Section: About text, button, and social links */}
+      <div className="lg:w-1/3 text-center lg:text-left mt-10 lg:mt-0 px-2">
+        
+        {/* About heading */}
+        <p className="text-black text-3xl sm:text-4xl mb-3">About Me</p>
+
+        {/* About description text */}
+        <p className="text-white font-bold text-base sm:text-lg md:text-xl mb-4">
           <em>
-            "I’m a disciplined learner who enjoys turning challenges into
-            growth. With a calm mindset, a strong learning attitude, and a
-            passion for building real-world projects, I bring clarity,
-            creativity, and consistency to every task."
+            "I’m a disciplined learner who enjoys turning challenges into growth.
+            With a calm mindset, a strong learning attitude, and a passion for
+            building real-world projects, I bring clarity, creativity, and
+            consistency to every task."
           </em>
         </p>
 
+        {/* Contact button */}
         <button
-          className="bg-white text-purple-700 font-semibold px-8 py-2 rounded-full hover:bg-purple-800 hover:text-white transition-all duration-300"
+          className="bg-white text-purple-700 font-semibold px-6 py-2 rounded-full hover:bg-purple-800 hover:text-white transition-all duration-300"
           onClick={onShowContact}
         >
-          Contact ME...
+          Contact Me
         </button>
 
-        {/* Social Icons */}
-        <div className="flex justify-center lg:justify-start mt-6 space-x-5">
+        {/* Social icons row */}
+        <div className="flex justify-center lg:justify-start mt-6 space-x-4">
+          
+          {/* GitHub link */}
           <a href="https://github.com/BhavyaAsari" target="_blank" rel="noreferrer">
             <BsGithub
-              size={55}
+              size={38}
               className="border-2 border-transparent hover:border-white rounded-full p-2 transition-all duration-300"
             />
           </a>
 
+          {/* LinkedIn link */}
           <a href="https://www.linkedin.com/in/bhavy-asari-613567279" target="_blank" rel="noreferrer">
             <BsLaptop
-              size={55}
+              size={38}
               className="border-2 border-transparent hover:border-white rounded-full p-2 transition-all duration-300"
             />
           </a>
 
+          {/* Instagram link */}
           <a href="https://www.instagram.com/bhavy._.153" target="_blank" rel="noreferrer">
             <BsInstagram
-              size={55}
+              size={38}
               className="border-2 border-transparent hover:border-white rounded-full p-2 transition-all duration-300"
             />
           </a>
