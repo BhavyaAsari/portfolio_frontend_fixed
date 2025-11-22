@@ -77,24 +77,24 @@ const Hero = ({ onShowContact }) => {
           {/* GitHub link */}
           <a href="https://github.com/BhavyaAsari" target="_blank" rel="noreferrer">
             <BsGithub
-              size={38}
-              className="border-2 border-transparent hover:border-white rounded-full p-2 transition-all duration-300"
+              size={68}
+              className="border-2  sm:text-5xl border-purple-400  rounded-full  hover:border-white rounded-full p-2 transition-all duration-300"
             />
           </a>
 
           {/* LinkedIn link */}
           <a href="https://www.linkedin.com/in/bhavy-asari-613567279" target="_blank" rel="noreferrer">
             <BsLaptop
-              size={38}
-              className="border-2 border-transparent hover:border-white rounded-full p-2 transition-all duration-300"
+              size={68}
+              className="border-2    border-purple-400  rounded-full hover:border-white rounded-full p-2 transition-all duration-300"
             />
           </a>
 
           {/* Instagram link */}
           <a href="https://www.instagram.com/bhavy._.153" target="_blank" rel="noreferrer">
             <BsInstagram
-              size={38}
-              className="border-2 border-transparent hover:border-white rounded-full p-2 transition-all duration-300"
+              size={68}
+              className="border-2 border-purple-400  rounded-full hover:border-white rounded-full p-2 transition-all duration-300"
             />
           </a>
         </div>
