@@ -17,7 +17,7 @@ const Hero = ({ onShowContact }) => {
         </div>
 
         {/* Animated name text */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mt-2 flex justify-center lg:justify-start text-white leading-tight">
+        <h1 className="text-3xl sm:text-6xl md:text-7xl font-bold mt-2 flex justify-center lg:justify-start text-white leading-tight">
           <TypeAnimation
             sequence={["Bhavya Asari", 1500, "", 500]}
             wrapper="span"

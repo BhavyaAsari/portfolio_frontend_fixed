@@ -48,7 +48,7 @@ function Education() {
 
       <p className="text-center text-white text-xl sm:text-2xl md:text-4xl mb-10">
         <em>
-          My educational <b className="text-black">advancement</b> throughout the years.
+          My educational <b className="text-yellow-100">advancement</b> throughout the years.
         </em>
       </p>
 

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const AnimatedCursor = ({
-  size = 25,
+  size = 30,
   color = "#7F00FF",
   // trailColor = "#FFFFFF",
 }) => {
