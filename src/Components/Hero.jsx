@@ -12,7 +12,7 @@ const Hero = ({ onShowContact }) => {
       <div className="lg:w-1/3 text-center lg:text-left mb-10 lg:mb-0">
         
         {/* Intro heading */}
-        <div className="text-4xl sm:text-5xl md:text-6xl mb-2 text-black">
+        <div className="text-4xl sm:text-5xl md:text-6xl mb-2 text-white">
           <span>I'm</span>
         </div>
 
@@ -32,7 +32,7 @@ const Hero = ({ onShowContact }) => {
 
         {/* Role description */}
         <p className="text-2xl sm:text-3xl md:text-4xl leading-relaxed">
-          <em className="font-bold flex justify-center lg:justify-start">
+          <em className="font-bold flex justify-center text-yellow-500 lg:justify-start">
             Web <span className="ml-2 text-purple-500">Developer</span>
           </em>
         </p>
@@ -51,7 +51,7 @@ const Hero = ({ onShowContact }) => {
       <div className="lg:w-1/3 text-center lg:text-left mt-10 lg:mt-0 px-2">
         
         {/* About heading */}
-        <p className="text-black text-3xl sm:text-4xl mb-3">About Me</p>
+        <p className="text-yellow-500 text-3xl sm:text-4xl mb-3">About Me</p>
 
         {/* About description text */}
         <p className="text-white font-bold text-base sm:text-lg md:text-xl mb-4">
