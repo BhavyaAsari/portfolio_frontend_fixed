@@ -1,9 +1,10 @@
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const AnimatedCursor = ({
   size = 25,
-  color = "#FF6FD9",
+  color = "#7F00FF",
   // trailColor = "#FFFFFF",
 }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -75,7 +76,7 @@ const AnimatedCursor = ({
           stiffness: 200,
           damping: 20,
         }}
-        className="pointer-events-none fixed top-0 left-0 z-[9999]"
+        className="hidden md:block pointer-events-none fixed top-0 left-0 z-[9999]"
         style={{
           width: size,
           height: size,

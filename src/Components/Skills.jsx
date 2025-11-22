@@ -1,5 +1,12 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { motion } from "framer-motion";
+import Code from "../assets/CodingLogo1.png";
+import backendLogo from "../assets/logobackend.png"
+import DBLOGO from "../assets/DBLOGO1.png"
+import ToolsLogo from "../assets/ToolsLogo1.png"
+import frontend from "../assets/frontend1.png"
+import bgImg from "../assets/skillbg.png"
 
 export default function Skills() {
   const responsive = {
@@ -12,75 +19,121 @@ export default function Skills() {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 640 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 640, min: 0 },
       items: 1,
     },
   };
 
   return (
-    <section className="" id="skills">
+    <section id="skills" className="mt-10 px-4 sm:px-10">
+      
+      {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className="text-6xl font-bold text-slate-1500">My Skills</h2>
-        <p className="text-white text-4xl mt-2">
-         <em> A glance at the technologies I've worked with.</em>
+        <h2 className="text-4xl sm:text-6xl font-bold text-black">
+          My Skills
+        </h2>
+
+        <p className="text-white text-xl sm:text-3xl mt-3 leading-relaxed max-w-2xl mx-auto">
+          <em>A glance at the technologies I've worked with.</em>
         </p>
       </div>
 
-      {/* Carousel Section */}
+      {/* Carousel */}
       <div className="max-w-6xl mx-auto">
         <Carousel
           responsive={responsive}
           infinite
           autoPlay
-          autoPlaySpeed={2000}
+          autoPlaySpeed={2500}
           showDots
           pauseOnHover
-          transitionDuration={700}
+          transitionDuration={600}
           className="pb-12"
         >
-          {/* Card 1 */}
-          <div className="bg-purple-700 text-white p-6 mx-3 rounded-xl shadow-xl hover:shadow-purple-400/60 hover:scale-105 transition-all duration-300 text-center">
-            <h3 className="text-2xl font-semibold mb-3">Programming</h3>
-            <p className="text-slate-200">JavaScript</p>
-            <p className="text-slate-200">C++</p>
-          </div>
+          
+          {/* Programming */}
+          <SkillCard  title="Programming" icon={Code} iconSize={100} items={["JavaScript", "C++"]} />
 
-          {/* Card 2 */}
-          <div className="bg-purple-700 text-white p-6 mx-3 rounded-xl shadow-xl hover:shadow-purple-400/60 hover:scale-105 transition-all duration-300 text-center">
-            <h3 className="text-2xl font-semibold mb-3">Frontend</h3>
-            <p className="text-slate-200">React.js</p>
-            <p className="text-slate-200">HTML</p>
-            <p className="text-slate-200">CSS</p>
-            <p className="text-slate-200">Tailwind CSS</p>
-          </div>
+          {/* Frontend */}
+          <SkillCard
 
-          {/* Card 3 */}
-          <div className="bg-purple-700 text-white p-6 mx-3 rounded-xl shadow-xl hover:shadow-purple-400/60 hover:scale-105 transition-all duration-300 text-center">
-            <h3 className="text-2xl font-semibold mb-3">Backend</h3>
-            <p className="text-slate-200">Node.js</p>
-            <p className="text-slate-200">Express.js</p>
-          </div>
+            title="Frontend"
+            iconSize={100}
+            icon={frontend}
+            items={["React.js", "HTML", "CSS", "Tailwind CSS"]}
+          />
 
-          {/* Card 4 */}
-          <div className="bg-purple-700 text-white p-6 mx-3 rounded-xl shadow-xl hover:shadow-purple-400/60 hover:scale-105 transition-all duration-300 text-center">
-            <h3 className="text-2xl font-semibold mb-3">Database</h3>
-            <p className="text-slate-200">MySQL</p>
-            <p className="text-slate-200">MongoDB</p>
-          </div>
+          {/* Backend */}
+          <SkillCard
+             title="Backend"
+             iconSize={200}
+            icon={backendLogo}
+            items={["Node.js", "Express.js"]}
+          />
 
-          {/* Card 5 */}
-          <div className="bg-purple-700 text-white p-6 mx-3 rounded-xl shadow-xl hover:shadow-purple-400/60 hover:scale-105 transition-all duration-300 text-center">
-            <h3 className="text-2xl font-semibold mb-3">Tools</h3>
-            <p className="text-slate-200">Git</p>
-            <p className="text-slate-200">VS Code</p>
-            <p className="text-slate-200">Postman</p>
-          </div>
+          {/* Database */}
+          <SkillCard title="Database" icon={DBLOGO} items={["MySQL", "MongoDB"]} />
+
+          {/* Tools */}
+          <SkillCard
+            title="Tools"
+            iconSize={100}
+            icon={ToolsLogo}
+            items={["Git", "VS Code", "Postman"]}
+          />
+
         </Carousel>
       </div>
     </section>
+  );
+}
+
+function SkillCard({ title, items, icon, iconSize = 300 }) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.07, y: -6 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{
+        type: "spring",
+        stiffness: 180,
+        damping: 15,
+      }}
+      style={{
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      className="
+        backdrop-blur-xl 
+        border border-white/20 
+        rounded-xl 
+        p-6 sm:p-8 mx-3
+        shadow-lg shadow-purple-800/30
+        hover:shadow-purple-400/70
+        transition-all duration-300
+        text-center
+      "
+    >
+      <div className="flex justify-center mb-4">
+        <img
+          src={icon} 
+          alt=""
+          style={{ width: iconSize, height: iconSize }}
+          className="object-contain drop-shadow-lg"
+        />
+      </div>
+
+      <h3 className="text-2xl sm:text-3xl font-semibold mb-4">{title}</h3>
+
+      {items.map((item, i) => (
+        <p key={i} className="text-slate-200 text-lg sm:text-xl">
+          {item}
+        </p>
+      ))}
+    </motion.div>
   );
 }

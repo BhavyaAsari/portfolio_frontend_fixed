@@ -37,6 +37,7 @@ export const Contact = () => {
 
     setButtonText("Send");
     let result = await response.json();
+    console.log(result);
     setFormDetails(formInitialization);
 
     if (result.success) {

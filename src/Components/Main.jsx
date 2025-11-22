@@ -5,13 +5,12 @@ import Projects from "./Projects";
 import Footer from "./Footer";
 import Skills from "./Skills"
 import { Contact } from "./Contact";
-import Purple from "../assets/purple.png"
+import Purple from "../assets/glowbg1.png"
 import Education from "./Education";
 import AnimatedCursor from "./AnimatedCursor";
 const Main = () => {
 
     const [ showContact,setShowContact] = useState(false);
-
     return (
 
    <div
