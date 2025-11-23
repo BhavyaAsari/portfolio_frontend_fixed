@@ -14,7 +14,13 @@ const Main = () => {
     return (
 
    <div
-  className="w-full min-h-screen bg-cover bg-center bg-no-repeat "
+  className="  relative
+    w-full
+    min-h-[100dvh]
+    overflow-x-hidden
+    bg-cover
+    bg-center
+    bg-no-repeat "
   style={{ backgroundImage: `url(${Purple})` }}
 >
 

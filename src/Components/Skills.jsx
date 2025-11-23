@@ -127,7 +127,7 @@ function SkillCard({ title, items, icon, iconSize = 100 }) {
         />
       </div>
 
-      <h3 className="text-2xl sm:text-3xl font-semibold mb-4">{title}</h3>
+      <h3 className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-[#4B1F6F] via-[#A56AA5] via-[#E2A97B] to-[#F0C674] text-transparent bg-clip-text">{title}</h3>
 
       {items.map((item, i) => (
         <p key={i} className="text-slate-200 text-lg sm:text-xl">
