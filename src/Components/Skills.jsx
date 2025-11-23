@@ -56,13 +56,13 @@ export default function Skills() {
         >
           
           {/* Programming */}
-          <SkillCard  title="Programming" icon={Code} iconSize={100} items={["JavaScript", "C++"]} />
+          <SkillCard  title="Programming" icon={Code} iconSize={200} items={["JavaScript", "C++"]} />
 
           {/* Frontend */}
           <SkillCard
 
             title="Frontend"
-            iconSize={100}
+            iconSize={200}
             icon={frontend}
             items={["React.js", "HTML", "CSS", "Tailwind CSS"]}
           />
@@ -76,12 +76,12 @@ export default function Skills() {
           />
 
           {/* Database */}
-          <SkillCard title="Database" icon={DBLOGO} items={["MySQL", "MongoDB"]} />
+          <SkillCard title="Database" icon={DBLOGO} iconSize={200} items={["MySQL", "MongoDB"]} />
 
           {/* Tools */}
           <SkillCard
             title="Tools"
-            iconSize={100}
+            iconSize={200}
             icon={ToolsLogo}
             items={["Git", "VS Code", "Postman"]}
           />
@@ -92,7 +92,7 @@ export default function Skills() {
   );
 }
 
-function SkillCard({ title, items, icon, iconSize = 300 }) {
+function SkillCard({ title, items, icon, iconSize = 100 }) {
   return (
     <motion.div
       whileHover={{ scale: 1.07, y: -6 }}

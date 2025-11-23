@@ -5,7 +5,7 @@ import Projects from "./Projects";
 import Footer from "./Footer";
 import Skills from "./Skills"
 import { Contact } from "./Contact";
-import Purple from "../assets/mainbg.png"
+import Purple from "../assets/3dBGpruple.png"
 import Education from "./Education";
 import AnimatedCursor from "./AnimatedCursor";
 const Main = () => {
@@ -14,7 +14,7 @@ const Main = () => {
     return (
 
    <div
-  className="w-full min-h-screen bg-cover bg-center bg-no-repeat"
+  className="w-full min-h-screen bg-cover bg-center bg-no-repeat "
   style={{ backgroundImage: `url(${Purple})` }}
 >
 

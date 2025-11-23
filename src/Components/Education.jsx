@@ -48,7 +48,7 @@ function Education() {
 
       <p className="text-center text-white text-xl sm:text-2xl md:text-4xl mb-10">
         <em>
-          My educational <b className="text-black">advancement</b> throughout the years.
+          My educational <b className="text-amber-500">advancement</b> throughout the years.
         </em>
       </p>
 
@@ -90,13 +90,13 @@ function Education() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 0.4 }}
-                  className={`absolute w-14 h-14 rounded-full bg-white border-4 border-purple-500 shadow-lg flex items-center justify-center
+                  className={`absolute w-40 h-40 mr-15 ml-15 m rounded-full bg-white border-4 border-purple-500 shadow-lg flex items-center justify-center
                     ${alignRight ? "translate-x-1/2 right-0" : "-translate-x-1/2 left-0"}`}
                 >
                   <img
                     src={e.img}
                     alt={e.title}
-                    className="w-8 h-8 object-contain"
+                    className="w-30 h-30 object-contain"
                   />
                 </motion.div>
               </div>
