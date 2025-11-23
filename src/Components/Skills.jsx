@@ -7,6 +7,7 @@ import DBLOGO from "../assets/DBLOGO1.png"
 import ToolsLogo from "../assets/ToolsLogo1.png"
 import frontend from "../assets/frontend1.png"
 import skillVideo from "../assets/Sky_Star_Effect_Video_Generation_1.mp4"
+import LazyVideo from "./LazyVideo";
 
 export default function Skills() {
   const responsive = {
@@ -115,17 +116,10 @@ function SkillCard({ title, items, icon, iconSize = 100 }) {
       "
     >
       {/*  Background Video */}
-      <video
-        src={skillVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="
-          absolute inset-0 w-full h-full object-cover
-          -z-10
-        "
-      />
+      <LazyVideo
+  src={skillVideo}
+  className="absolute inset-0 w-full h-full object-cover -z-10"
+/>
 
       {/* Optional dark overlay for readability (you can remove if not needed) */}
       <div className="absolute inset-0 bg-black/40 -z-10"></div>
