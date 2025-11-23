@@ -6,7 +6,7 @@ import backendLogo from "../assets/logobackend.png"
 import DBLOGO from "../assets/DBLOGO1.png"
 import ToolsLogo from "../assets/ToolsLogo1.png"
 import frontend from "../assets/frontend1.png"
-import bgImg from "../assets/skillbg.png"
+import skillVideo from "../assets/Sky_Star_Effect_Video_Generation_1.mp4"
 
 export default function Skills() {
   const responsive = {
@@ -102,12 +102,8 @@ function SkillCard({ title, items, icon, iconSize = 100 }) {
         stiffness: 180,
         damping: 15,
       }}
-      style={{
-        backgroundImage: `url(${bgImg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
       className="
+        relative overflow-hidden   /* required for video bg */
         backdrop-blur-xl 
         border border-white/20 
         rounded-xl 
@@ -118,22 +114,46 @@ function SkillCard({ title, items, icon, iconSize = 100 }) {
         text-center
       "
     >
-      <div className="flex justify-center mb-4">
-        <img
-          src={icon} 
-          alt=""
-          style={{ width: iconSize, height: iconSize }}
-          className="object-contain drop-shadow-lg"
-        />
+      {/*  Background Video */}
+      <video
+        src={skillVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="
+          absolute inset-0 w-full h-full object-cover
+          -z-10
+        "
+      />
+
+      {/* Optional dark overlay for readability (you can remove if not needed) */}
+      <div className="absolute inset-0 bg-black/40 -z-10"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-10">
+        <div className="flex justify-center mb-4">
+          <img
+            src={icon}
+            alt=""
+            style={{ width: iconSize, height: iconSize }}
+            className="object-contain drop-shadow-lg"
+          />
+        </div>
+
+        <h3 className="text-2xl sm:text-3xl font-semibold mb-4 
+          bg-gradient-to-r from-[#4B1F6F] via-[#A56AA5] via-[#E2A97B] to-[#F0C674]
+          text-transparent bg-clip-text
+        ">
+          {title}
+        </h3>
+
+        {items.map((item, i) => (
+          <p key={i} className="text-slate-200 text-lg sm:text-xl">
+            {item}
+          </p>
+        ))}
       </div>
-
-      <h3 className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-[#4B1F6F] via-[#A56AA5] via-[#E2A97B] to-[#F0C674] text-transparent bg-clip-text">{title}</h3>
-
-      {items.map((item, i) => (
-        <p key={i} className="text-slate-200 text-lg sm:text-xl">
-          {item}
-        </p>
-      ))}
     </motion.div>
   );
 }
