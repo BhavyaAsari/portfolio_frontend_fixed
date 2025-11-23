@@ -1,6 +1,8 @@
 import ResumeAnalyzer from "../assets/Resume.png";
 import VelvetScreen from "../assets/VelvetScreen (1).png";
 import AnimeHub from "../assets/AnimeHub.png";
+import Portfolio from "../assets/portfolio.png"
+import AiBot from "../assets/Aibot.png"
 
 export default function Projects() {
   return (
@@ -52,9 +54,9 @@ export default function Projects() {
               </div>
               <div className="p-5 flex items-center justify-center">
                 <img
-                  src={AnimeHub}
-                  alt="Anime Hub"
-                  className="w-52 h-auto rounded-md"
+                  src={Portfolio}
+                  alt="portfolio"
+                  className="w-72 h-auto rounded-md"
                 />
               </div>
             </div>
@@ -76,9 +78,9 @@ export default function Projects() {
               </div>
               <div className="p-5 flex items-center justify-center">
                 <img
-                  src={AnimeHub}
-                  alt="Anime Hub"
-                  className="w-52 h-auto rounded-md"
+                  src={AiBot}
+                  alt="vynx"
+                  className="w-72 h-auto rounded-md"
                 />
               </div>
             </div>
